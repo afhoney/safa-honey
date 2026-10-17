@@ -10,361 +10,435 @@
     </title>
     <!-- الألوان وتنسيق الصفحة والجوال -->
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;
-    500;
-    600;
-    700;
-    800&display=swap');
-    :root{
+    @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap');
+    :root {
       --navy:#252052;
       --orange:#fc961f;
       --paper:#fbf8f1;
-      --muted:#777284}
-      *{
-        box-sizing:border-box}
-        body{
-          margin:0;
-          background:var(--paper);
-          color:var(--navy);
-          font-family:Tajawal,Tahoma,Arial,sans-serif}
-          button{
-            font:inherit;
-            cursor:pointer;
-            color:inherit}
-            button:focus-visible{
-              outline:3px solid var(--orange);
-              outline-offset:5px}
-              .page{
-                min-height:100svh;
-                max-width:1440px;
-                margin:auto;
-                padding:34px 7vw 22px;
-                position:relative;
-                overflow:hidden}
-                .top{
-                  display:flex;
-                  justify-content:space-between;
-                  align-items:center;
-                  font-size:11px;
-                  letter-spacing:3px;
-                  direction:ltr}
-                  .top .mark{
-                    display:flex;
-                    gap:9px;
-                    align-items:center}
-                    .hex{
-                      width:12px;
-                      height:14px;
-                      background:var(--orange);
-                      clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
-                      .top-ar{
-                        letter-spacing:0;
-                        font-size:13px}
-                        .layout{
-                          min-height:calc(100svh - 116px);
-                          display:grid;
-                          grid-template-columns:1fr 1fr;
-                          gap:9%;
-                          align-items:center;
-                          padding:45px 0}
-                          .identity{
-                            position:relative;
-                            text-align:center;
-                            padding:45px 25px}
-                            .identity:before{
-                              content:'';
-                              position:absolute;
-                              inset:0 0 55px;
-                              background:linear-gradient(140deg,#f6e9d0,#f8efdd 55%,#fcf8f0);
-                              clip-path:polygon(50% 0,94% 24%,94% 75%,50% 100%,6% 75%,6% 24%);
-                              z-index:-1}
-                              .logo{
-                                width:225px;
-                                max-width:70%;
-                                height:auto;
-                                display:block;
-                                margin:0 auto 28px;
-                                mix-blend-mode:multiply}
-                                .identity h1{
-                                  font-size:32px;
-                                  font-weight:500;
-                                  margin:22px 0 12px}
-                                  .identity p{
-                                    font-size:15px;
-                                    color:#7b705e;
-                                    line-height:1.9;
-                                    margin:0}
-                                    .orbit{
-                                      position:absolute;
-                                      width:27px;
-                                      height:30px;
-                                      clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
-                                      background:var(--orange);
-                                      top:20%;
-                                      right:4%;
-                                      transform:rotate(10deg)}
-                                      .orbit.two{
-                                        top:68%;
-                                        right:auto;
-                                        left:2%;
-                                        width:17px;
-                                        height:20px;
-                                        background:var(--navy)}
-                                        .eyebrow{
-                                          display:flex;
-                                          align-items:center;
-                                          gap:10px;
-                                          font-size:12px;
-                                          color:#8c7b64;
-                                          margin-bottom:12px}
-                                          .eyebrow:before{
-                                            content:'';
-                                            width:24px;
-                                            height:1px;
-                                            background:var(--orange)}
-                                            h2{
-                                              font-size:27px;
-                                              margin:0 0 25px;
-                                              font-weight:700}
-                                              .website{
-                                                width:100%;
-                                                border:0;
-                                                border-radius:16px;
-                                                background:var(--navy);
-                                                color:white;
-                                                padding:23px 22px;
-                                                display:flex;
-                                                align-items:center;
-                                                gap:16px;
-                                                text-align:right;
-                                                box-shadow:0 10px 25px #25205214;
-                                                transition:transform .2s,background .2s}
-                                                .website:hover{
-                                                  transform:translateY(-3px);
-                                                  background:#342b69}
-                                                  svg{
-                                                    width:24px;
-                                                    height:24px;
-                                                    flex-shrink:0}
-                                                    .website .web-icon{
-                                                      width:46px;
-                                                      height:46px;
-                                                      background:#ffffff10;
-                                                      border:1px solid #ffffff20;
-                                                      border-radius:50%;
-                                                      display:grid;
-                                                      place-items:center;
-                                                      color:#ffb352}
-                                                      .website strong{
-                                                        font-size:19px;
-                                                        display:block}
-                                                        .website small{
-                                                          display:block;
-                                                          margin-top:6px;
-                                                          color:#d4cfe6;
-                                                          font-size:12px}
-                                                          .arrow{
-                                                            margin-right:auto;
-                                                            direction:ltr;
-                                                            font-family:Arial;
-                                                            font-size:22px;
-                                                            font-weight:400}
-                                                            .website .arrow{
-                                                              color:#ffb352}
-                                                              .section-label{
-                                                                display:flex;
-                                                                align-items:center;
-                                                                gap:12px;
-                                                                color:#8e8491;
-                                                                font-size:12px;
-                                                                margin:28px 0 15px}
-                                                                .section-label:after{
-                                                                  content:'';
-                                                                  height:1px;
-                                                                  background:#e8e1d8;
-                                                                  flex:1}
-                                                                  .socials{
-                                                                    display:grid;
-                                                                    grid-template-columns:1fr 1fr;
-                                                                    gap:12px}
-                                                                    .social{
-                                                                      display:flex;
-                                                                      align-items:center;
-                                                                      gap:12px;
-                                                                      text-align:right;
-                                                                      background:#fffdf8;
-                                                                      border:1px solid #e8e1d8;
-                                                                      border-radius:13px;
-                                                                      padding:18px 15px;
-                                                                      transition:transform .2s,border-color .2s,background .2s}
-                                                                      .social:hover{
-                                                                        transform:translateY(-3px);
-                                                                        border-color:var(--orange);
-                                                                        background:#fff7e9}
-                                                                        .social strong{
-                                                                          display:block;
-                                                                          font-size:15px;
-                                                                          font-weight:600}
-                                                                          .social small{
-                                                                            display:block;
-                                                                            font-size:10px;
-                                                                            letter-spacing:.5px;
-                                                                            color:var(--muted);
-                                                                            margin-top:6px}
-                                                                            .social .arrow{
-                                                                              font-size:16px;
-                                                                              color:#a69ca4}
-                                                                              .social-icon{
-                                                                                display:flex}
-                                                                                .contact{
-                                                                                  display:grid;
-                                                                                  grid-template-columns:1fr 1fr;
-                                                                                  gap:12px;
-                                                                                  margin-top:26px;
-                                                                                  padding-top:22px;
-                                                                                  border-top:1px solid #e8e1d8}
-                                                                                  .contact button{
-                                                                                    border:0;
-                                                                                    padding:5px 0;
-                                                                                    background:none;
-                                                                                    display:flex;
-                                                                                    text-align:right;
-                                                                                    align-items:center;
-                                                                                    gap:11px}
-                                                                                    .contact svg{
-                                                                                      width:19px;
-                                                                                      color:#a5875f}
-                                                                                      .contact strong{
-                                                                                        display:block;
-                                                                                        font-size:12px;
-                                                                                        font-weight:500}
-                                                                                        .contact small{
-                                                                                          display:block;
-                                                                                          font-size:11px;
-                                                                                          color:#948b90;
-                                                                                          margin-top:5px}
-                                                                                          footer{
-                                                                                            direction:ltr;
-                                                                                            display:flex;
-                                                                                            justify-content:space-between;
-                                                                                            gap:15px;
-                                                                                            border-top:1px solid #e8e1d8;
-                                                                                            padding-top:18px;
-                                                                                            color:#999095;
-                                                                                            font-size:10px;
-                                                                                            letter-spacing:1px}
-                                                                                            footer span:last-child{
-                                                                                              letter-spacing:0}
-                                                                                              dialog{
-                                                                                                border:1px solid #eee3d2;
-                                                                                                border-radius:22px;
-                                                                                                padding:35px 28px;
-                                                                                                background:var(--paper);
-                                                                                                color:var(--navy);
-                                                                                                text-align:center;
-                                                                                                width:min(360px,90vw);
-                                                                                                box-shadow:0 20px 80px #17122a33}
-                                                                                                dialog::backdrop{
-                                                                                                  background:#17122a88;
-                                                                                                  backdrop-filter:blur(5px)}
-                                                                                                  dialog .hex{
-                                                                                                    margin:0 auto 20px;
-                                                                                                    width:32px;
-                                                                                                    height:36px}
-                                                                                                    dialog h2{
-                                                                                                      margin:0 0 12px;
-                                                                                                      font-size:26px}
-                                                                                                      dialog p{
-                                                                                                        font-size:14px;
-                                                                                                        line-height:1.8;
-                                                                                                        color:var(--muted)}
-                                                                                                        dialog button{
-                                                                                                          border:0;
-                                                                                                          border-radius:9px;
-                                                                                                          background:var(--navy);
-                                                                                                          color:white;
-                                                                                                          padding:12px 36px;
-                                                                                                          margin-top:10px}
-                                                                                                          .layout{
-                                                                                                            animation:enter .7s ease both}
-                                                                                                            @keyframes enter{
-                                                                                                              from{
-                                                                                                                opacity:0;
-                                                                                                                transform:translateY(12px)}
-                                                                                                                to{
-                                                                                                                  opacity:1;
-                                                                                                                  transform:none}
-                                                                                                                }
-                                                                                                                @media(min-width:1500px){
-                                                                                                                  .page{
-                                                                                                                    padding-left:100px;
-                                                                                                                    padding-right:100px}
-                                                                                                                  }
-                                                                                                                  @media(max-width:760px){
-                                                                                                                    .page{
-                                                                                                                      padding:22px 24px 20px}
-                                                                                                                      .top{
-                                                                                                                        font-size:9px;
-                                                                                                                        letter-spacing:2px}
-                                                                                                                        .top-ar{
-                                                                                                                          font-size:11px}
-                                                                                                                          .layout{
-                                                                                                                            display:block;
-                                                                                                                            padding:26px 0 30px;
-                                                                                                                            min-height:0}
-                                                                                                                            .identity{
-                                                                                                                              padding:25px 15px 26px;
-                                                                                                                              max-width:360px;
-                                                                                                                              margin:0 auto 27px}
-                                                                                                                              .identity:before{
-                                                                                                                                inset:0 25px 30px}
-                                                                                                                                .logo{
-                                                                                                                                  width:135px;
-                                                                                                                                  margin-bottom:16px}
-                                                                                                                                  .identity h1{
-                                                                                                                                    font-size:24px;
-                                                                                                                                    margin:14px 0 6px}
-                                                                                                                                    .identity p{
-                                                                                                                                      font-size:12px}
-                                                                                                                                      .orbit{
-                                                                                                                                        right:7%;
-                                                                                                                                        width:17px;
-                                                                                                                                        height:20px}
-                                                                                                                                        .orbit.two{
-                                                                                                                                          left:7%;
-                                                                                                                                          width:12px;
-                                                                                                                                          height:14px}
-                                                                                                                                          .eyebrow{
-                                                                                                                                            font-size:10px;
-                                                                                                                                            margin-bottom:9px}
-                                                                                                                                            h2{
-                                                                                                                                              font-size:23px;
-                                                                                                                                              margin-bottom:18px}
-                                                                                                                                              .website{
-                                                                                                                                                padding:19px 17px}
-                                                                                                                                                .website strong{
-                                                                                                                                                  font-size:17px}
-                                                                                                                                                  .website small{
-                                                                                                                                                    font-size:11px}
-                                                                                                                                                    .social{
-                                                                                                                                                      padding:17px 12px;
-                                                                                                                                                      gap:10px}
-                                                                                                                                                      .social strong{
-                                                                                                                                                        font-size:14px}
-                                                                                                                                                        .social svg{
-                                                                                                                                                          width:21px}
-                                                                                                                                                          .section-label{
-                                                                                                                                                            margin-top:23px}
-                                                                                                                                                            .contact{
-                                                                                                                                                              margin-top:23px}
-                                                                                                                                                              footer{
-                                                                                                                                                                font-size:8px}
-                                                                                                                                                              }
-                                                                                                                                                              @media(prefers-reduced-motion:reduce){
-                                                                                                                                                                *{
-                                                                                                                                                                  animation:none!important;
-                                                                                                                                                                  transition:none!important}
-                                                                                                                                                                }
+      --muted:#777284;
+    }
+    * {
+      box-sizing:border-box;
+    }
+    body {
+      margin:0;
+      background:var(--paper);
+      color:var(--navy);
+      font-family:Tajawal,Tahoma,Arial,sans-serif;
+    }
+    button {
+      font:inherit;
+      cursor:pointer;
+      color:inherit;
+    }
+    button:focus-visible {
+      outline:3px solid var(--orange);
+      outline-offset:5px;
+    }
+    .page {
+      min-height:100svh;
+      max-width:1440px;
+      margin:auto;
+      padding:34px 7vw 22px;
+      position:relative;
+      overflow:hidden;
+    }
+    .top {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:11px;
+      letter-spacing:3px;
+      direction:ltr;
+    }
+    .top .mark {
+      display:flex;
+      gap:9px;
+      align-items:center;
+    }
+    .hex {
+      width:12px;
+      height:14px;
+      background:var(--orange);
+      clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+    }
+    .top-ar {
+      letter-spacing:0;
+      font-size:13px;
+    }
+    .layout {
+      min-height:calc(100svh - 116px);
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:9%;
+      align-items:center;
+      padding:45px 0;
+    }
+    .identity {
+      position:relative;
+      text-align:center;
+      padding:45px 25px;
+    }
+    .identity:before {
+      content:'';
+      position:absolute;
+      inset:0 0 55px;
+      background:linear-gradient(140deg,#f6e9d0,#f8efdd 55%,#fcf8f0);
+      clip-path:polygon(50% 0,94% 24%,94% 75%,50% 100%,6% 75%,6% 24%);
+      z-index:-1;
+    }
+    .logo {
+      width:225px;
+      max-width:70%;
+      height:auto;
+      display:block;
+      margin:0 auto 28px;
+      mix-blend-mode:multiply;
+    }
+    .identity h1 {
+      font-size:32px;
+      font-weight:500;
+      margin:22px 0 12px;
+    }
+    .identity p {
+      font-size:15px;
+      color:#7b705e;
+      line-height:1.9;
+      margin:0;
+    }
+    .orbit {
+      position:absolute;
+      width:27px;
+      height:30px;
+      clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+      background:var(--orange);
+      top:20%;
+      right:4%;
+      transform:rotate(10deg);
+    }
+    .orbit.two {
+      top:68%;
+      right:auto;
+      left:2%;
+      width:17px;
+      height:20px;
+      background:var(--navy);
+    }
+    .eyebrow {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-size:12px;
+      color:#8c7b64;
+      margin-bottom:12px;
+    }
+    .eyebrow:before {
+      content:'';
+      width:24px;
+      height:1px;
+      background:var(--orange);
+    }
+    h2 {
+      font-size:27px;
+      margin:0 0 25px;
+      font-weight:700;
+    }
+    .website {
+      width:100%;
+      border:0;
+      border-radius:16px;
+      background:var(--navy);
+      color:white;
+      padding:23px 22px;
+      display:flex;
+      align-items:center;
+      gap:16px;
+      text-align:right;
+      box-shadow:0 10px 25px #25205214;
+      transition:transform .2s,background .2s;
+    }
+    .website:hover {
+      transform:translateY(-3px);
+      background:#342b69;
+    }
+    svg {
+      width:24px;
+      height:24px;
+      flex-shrink:0;
+    }
+    .website .web-icon {
+      width:46px;
+      height:46px;
+      background:#ffffff10;
+      border:1px solid #ffffff20;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      color:#ffb352;
+    }
+    .website strong {
+      font-size:19px;
+      display:block;
+    }
+    .website small {
+      display:block;
+      margin-top:6px;
+      color:#d4cfe6;
+      font-size:12px;
+    }
+    .arrow {
+      margin-right:auto;
+      direction:ltr;
+      font-family:Arial;
+      font-size:22px;
+      font-weight:400;
+    }
+    .website .arrow {
+      color:#ffb352;
+    }
+    .section-label {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      color:#8e8491;
+      font-size:12px;
+      margin:28px 0 15px;
+    }
+    .section-label:after {
+      content:'';
+      height:1px;
+      background:#e8e1d8;
+      flex:1;
+    }
+    .socials {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+    .social {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-align:right;
+      background:#fffdf8;
+      border:1px solid #e8e1d8;
+      border-radius:13px;
+      padding:18px 15px;
+      transition:transform .2s,border-color .2s,background .2s;
+    }
+    .social:hover {
+      transform:translateY(-3px);
+      border-color:var(--orange);
+      background:#fff7e9;
+    }
+    .social strong {
+      display:block;
+      font-size:15px;
+      font-weight:600;
+    }
+    .social small {
+      display:block;
+      font-size:10px;
+      letter-spacing:.5px;
+      color:var(--muted);
+      margin-top:6px;
+    }
+    .social .arrow {
+      font-size:16px;
+      color:#a69ca4;
+    }
+    .social-icon {
+      display:flex;
+    }
+    .contact {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:26px;
+      padding-top:22px;
+      border-top:1px solid #e8e1d8;
+    }
+    .contact button {
+      border:0;
+      padding:5px 0;
+      background:none;
+      display:flex;
+      text-align:right;
+      align-items:center;
+      gap:11px;
+    }
+    .contact svg {
+      width:19px;
+      color:#a5875f;
+    }
+    .contact strong {
+      display:block;
+      font-size:12px;
+      font-weight:500;
+    }
+    .contact small {
+      display:block;
+      font-size:11px;
+      color:#948b90;
+      margin-top:5px;
+    }
+    footer {
+      direction:ltr;
+      display:flex;
+      justify-content:space-between;
+      gap:15px;
+      border-top:1px solid #e8e1d8;
+      padding-top:18px;
+      color:#999095;
+      font-size:10px;
+      letter-spacing:1px;
+    }
+    footer span:last-child {
+      letter-spacing:0;
+    }
+    dialog {
+      border:1px solid #eee3d2;
+      border-radius:22px;
+      padding:35px 28px;
+      background:var(--paper);
+      color:var(--navy);
+      text-align:center;
+      width:min(360px,90vw);
+      box-shadow:0 20px 80px #17122a33;
+    }
+    dialog::backdrop {
+      background:#17122a88;
+      backdrop-filter:blur(5px);
+    }
+    dialog .hex {
+      margin:0 auto 20px;
+      width:32px;
+      height:36px;
+    }
+    dialog h2 {
+      margin:0 0 12px;
+      font-size:26px;
+    }
+    dialog p {
+      font-size:14px;
+      line-height:1.8;
+      color:var(--muted);
+    }
+    dialog button {
+      border:0;
+      border-radius:9px;
+      background:var(--navy);
+      color:white;
+      padding:12px 36px;
+      margin-top:10px;
+    }
+    .layout {
+      animation:enter .7s ease both;
+    }
+    @keyframes enter {
+      from {
+        opacity:0;
+        transform:translateY(12px);
+      }
+      to {
+        opacity:1;
+        transform:none;
+      }
+    }
+    @media(min-width:1500px) {
+      .page {
+        padding-left:100px;
+        padding-right:100px;
+      }
+    }
+    @media(max-width:760px) {
+      .page {
+        padding:22px 24px 20px;
+      }
+      .top {
+        font-size:9px;
+        letter-spacing:2px;
+      }
+      .top-ar {
+        font-size:11px;
+      }
+      .layout {
+        display:block;
+        padding:26px 0 30px;
+        min-height:0;
+      }
+      .identity {
+        padding:25px 15px 26px;
+        max-width:360px;
+        margin:0 auto 27px;
+      }
+      .identity:before {
+        inset:0 25px 30px;
+      }
+      .logo {
+        width:135px;
+        margin-bottom:16px;
+      }
+      .identity h1 {
+        font-size:24px;
+        margin:14px 0 6px;
+      }
+      .identity p {
+        font-size:12px;
+      }
+      .orbit {
+        right:7%;
+        width:17px;
+        height:20px;
+      }
+      .orbit.two {
+        left:7%;
+        width:12px;
+        height:14px;
+      }
+      .eyebrow {
+        font-size:10px;
+        margin-bottom:9px;
+      }
+      h2 {
+        font-size:23px;
+        margin-bottom:18px;
+      }
+      .website {
+        padding:19px 17px;
+      }
+      .website strong {
+        font-size:17px;
+      }
+      .website small {
+        font-size:11px;
+      }
+      .social {
+        padding:17px 12px;
+        gap:10px;
+      }
+      .social strong {
+        font-size:14px;
+      }
+      .social svg {
+        width:21px;
+      }
+      .section-label {
+        margin-top:23px;
+      }
+      .contact {
+        margin-top:23px;
+      }
+      footer {
+        font-size:8px;
+      }
+    }
+    @media(prefers-reduced-motion:reduce) {
+      * {
+        animation:none!important;
+        transition:none!important;
+      }
+    }
     </style>
   </head>
   <body>
